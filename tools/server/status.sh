@@ -10,5 +10,5 @@ echo $status
 if [ "$status" = "200" ]; then
   echo 'OK'
 else
-  echo `date`": Server Down" | mail -s "$url-Status" $receipt
+  echo `date`": Server Down, Status Code: $status" | mail -s "$url-Status" $receipt
 fi
