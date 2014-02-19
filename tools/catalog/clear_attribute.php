@@ -10,7 +10,7 @@ if (file_exists($compilerConfig)) {
     include $compilerConfig;
 }
 
-$mageFilename = 'app/Mage.php';
+$mageFilename = '../../../app/Mage.php';
 $maintenanceFile = 'maintenance.flag';
 
 if (!file_exists($mageFilename)) {
