@@ -68,8 +68,8 @@ fclose($_fin);
 
 $_store_views = [1,2,3,4,5,6,7,8];
 foreach ($_store_views as $_store_view) {
-    $_base_url = Mage::app()->getStore($_store_view)->getBaseUrl();
-    
+    $_base_url = Mage::app()->getStoreId($_store_view)->getBaseUrl();
+
     foreach ($_products as $_sku => $_data) {
         $_product = Mage::getModel('catalog/product')->setStore($_store_view)->loadByAttribute('sku', $_sku);
         if ($_product === FALSE) { continue; }
